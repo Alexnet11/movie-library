@@ -1,0 +1,83 @@
+:root {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+
+  color: #f5f7ff;
+  background-color: #080a0f;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  --background: #080a0f;
+  --surface: #12151d;
+  --surface-light: #1a1e29;
+
+  --text: #f5f7ff;
+  --text-muted: #9299aa;
+
+  --accent: #7c5cff;
+  --accent-light: #9d86ff;
+  --accent-background: rgba(124, 92, 255, 0.12);
+
+  --border: rgba(255, 255, 255, 0.08);
+  --border-active: rgba(124, 92, 255, 0.6);
+
+  --header-height: 72px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+
+  color: var(--text);
+
+  background:
+    radial-gradient(
+      circle at 50% -10%,
+      rgba(124, 92, 255, 0.18),
+      transparent 520px
+    ),
+    var(--background);
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+button,
+input,
+textarea {
+  font-size: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+  min-height: 100vh;
+}
