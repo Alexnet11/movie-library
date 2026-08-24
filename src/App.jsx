@@ -1,38 +1,31 @@
-import { Route, Routes} from 'react-router';
-import NotFoundPage from './pages/NotFoundPage';
-import Header from './components/Header'; 
-import HomePage from './pages/HomePage';
+import { Route, Routes } from 'react-router';
+import Header from './components/Header';
 import MoviesPage from './pages/MoviesPage';
+import HomePage from './pages/HomePage';
+
 import './App.css';
+
 
 function App() {
   return(
     <>
       <Header/>
 
-      <main className='main-content'>
+      <main>
         <Routes>
           <Route
-            path='/'
-            element = {<HomePage/>} 
+            path="/"
+            element = {<HomePage/>}
           />
 
-          <Route
-            path='/movies'
-            element= {<MoviesPage/>} 
+           <Route
+            path="/movies"
+            element = {<MoviesPage/>}
           />
 
-          <Route
-            path='/movies/:movieId'
-            element={<MoviesPage/>}
-          />
-
-          <Route
-            path='*'
-            element = {<NotFoundPage/>}
-          />
-        </Routes>
+          </Routes>
       </main>
+
     </>
   );
 }

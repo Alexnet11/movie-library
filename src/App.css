@@ -920,38 +920,3 @@ button:focus-visible {
     transform: translateY(0) scale(1);
   }
 }
-
-
-/* ===================================
-   МОБИЛЬНАЯ ВЕРСИЯ
-=================================== */
-
-@media (max-width: 520px) {
-  .modal-backdrop {
-    align-items: flex-end;
-    padding: 0;
-  }
-
-  .modal {
-    width: 100%;
-    padding: 30px 20px 24px;
-
-    border-right: none;
-    border-bottom: none;
-    border-left: none;
-
-    border-radius: 20px 20px 0 0;
-  }
-
-  .modal h2 {
-    font-size: 30px;
-  }
-
-  .login-form input {
-    height: 46px;
-  }
-
-  .login-form__submit {
-    width: 100%;
-  }
-}

@@ -1,17 +1,18 @@
 
+
 function HomePage(){
   return(
-    <section>
-      <h1>Библиотека фильмов</h1>
+    <select className="home-page">
+      
+      <h1>БИБЛИОТЕКА ФИЛЬМОВ</h1>
 
       <p>
-        Учеюное приложение для изучения React
+        Добро пожаловать! Это мой учебный проект.  
       </p>
 
 
-    </section>
+    </select>
   );
 }
 
 export default HomePage;
-

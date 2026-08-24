@@ -1,38 +1,38 @@
-import { NavLink } from 'react-router';
-import { useState } from 'react';
-import LoginModal from './LoginModal';
+import { NavLink } from "react-router";
 
-function Header() {
-  const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const getLinkClassName = ({ isActive }) => {
+function Header(){
+  function getLinkClass({isActive}){
     return isActive
-      ? 'nav-link nav-link--active'
-      : 'nav-link';
-  };
+      ? "nav-link nav-link--active"
+      : "nav-link"; 
+  }
 
-  return (
+
+  return(
     <header className="header">
-      <div className="header__container">
-        <NavLink to="/" className="logo">
-          Библиотека фильмов
+      <NavLink
+        className="logo"
+        to="/"
+      >
+         Movie Library
+      </NavLink>
+
+      <nav className="navigation">
+        <NavLink
+          className={getLinkClass}
+          to="/"
+          end
+        >
+          Главная
         </NavLink>
 
-        <nav className="navigation">
-          <NavLink
-            to="/"
-            className={getLinkClassName}
-          >
-            Главная
-          </NavLink>
-
-          <NavLink
-            to="/movies"
-            className={getLinkClassName}
-          >
-            Фильмы
-          </NavLink>
-        </nav>
-      </div>
+        <NavLink
+          className={getLinkClass}
+          to="/movies"
+        >
+          Фильмы
+        </NavLink>
+      </nav>
     </header>
   );
 }
